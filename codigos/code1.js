@@ -1,6 +1,10 @@
-const birthday = {
-    name: 'Renan',
-    date: '22-08',
-}
+let precoCarne = 38
 
-console.log(`Feliz Aniversário ${birthday.name}!`)
+if(precoCarne <= 28) {
+    console.log('Barato')
+} else if(precoCarne <= 40) {
+    console.log('Normal')
+} else {
+    console.log('Cara')
+}   
+// 28-barato, 40-normal, >50-cara
