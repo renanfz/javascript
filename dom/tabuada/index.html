@@ -8,17 +8,40 @@
         body {
             font-family: monospace;
             font-size: 1.2em;
+            display: flex;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 130px;
+            margin: 20px auto;
+        }
+
+        th {
+            font-size: 1.4em;
+        }
+        td, th {
+            border: 1px solid black;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        main {
+            margin: auto;
         }
     </style>
 </head>
 <body>
-    <h2>Tabuada Dinamica</h2>
-    <input type="number">
-    <button onclick="calcularTabuada()">Calcular</button>
-
-    <table></table>
-
-
+    <main>
+        <h2>Tabuada Dinamica</h2>
+        <input type="number" placeholder="Número">
+        <button onclick="calcularTabuada()">Calcular</button><br>
+        <table>
+            <tr>
+                <th id="numeroTabuada" colspan="2">0</th>
+            </tr>
+        </table>
+    </main>
     <script src="code.js"></script>
 </body>
 </html>
