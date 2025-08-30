@@ -3,20 +3,15 @@ let input = document.querySelector('input')
 input.addEventListener('keyup', addTarefa)
 
 function addTarefa(e) {
-    let newElement = document.createElement('li')
-    newElement.textContent = input.value
+    let campoPreenchido = input.value.trim().length != 0
+    let teclaEnter = e.key === 'Enter'
 
-    if(input.value.trim().length != 0 || e.code === 'Enter') {
+    if (campoPreenchido && teclaEnter) {
+        let newElement = document.createElement('li')
+        newElement.textContent = input.value
         listaTarefas.appendChild(newElement)
-    } else {
+        input.value = ''
+    } else if (!campoPreenchido && teclaEnter) {
         alert('Ops, o campo esta vazio! Preencha com uma tarefa.')
     }
 }
-
-
-
-
-
-
-
-// 1passo identificar o evento para enter
