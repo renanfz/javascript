@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+h2 {text-align: center;
+    margin: 10px;}
+
+#time {
+    text-align: right;
+    padding: 3px 15px;
+    background-color: gray;
+    color: white;
+    border-radius: 4px;
+    margin-left: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin: auto;
+}
+
+.questoes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 50px;
+    margin-bottom: 5px;
+}
+
+.pergunta, .resultado {
+    border: 1px solid rgb(192, 192, 192);
+    text-indent: 3px;
+    padding: 10px;
+}
+
+input {
+    text-indent: 10px;
+    font-size: 1.1em;
+}
+
+button {
+    padding: 5px 8px;
+}
+
+.pontuacao {
+    color: white;
+    font-size: 1.3em;
+}
+
+.comandos {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 15%;
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 0;
+    align-items: center;
+}
+
+svg.lucide {
+    height: 25px;
+    color: #00b100;
+}
+
