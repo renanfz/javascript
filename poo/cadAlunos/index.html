@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cadastro de Alunos - UFMG</h2>
+
+    <label for="nomeAluno">Nome:</label>
+    <input type="text" autocomplete="name" id="nomeAluno"><br><br>
+
+    <label for="idadeAluno">Idade:</label>
+    <input type="number" id="idadeAluno"><br><br>
+
+    <label for="cursoAluno">Curso:</label>
+    <input type="text" id="cursoAluno"><br><br>
+    <button onclick="novoAluno()">Cadastrar</button>
+
+    <h3>Lista de alunos</h3>
+    <ul id="listaAlunos"></ul>
+
+    <script src="code.js"></script>
+</body>
+</html>
