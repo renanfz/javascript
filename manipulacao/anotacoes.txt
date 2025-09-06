@@ -1,0 +1,4 @@
+STRINGS --
+slice('separador') Transforma uma string em array por separador
+replace('isso', 'por isso') Troque isso por isso
+substring(0, 5) Mostre do índice 0 até 5
