@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -12,18 +13,33 @@
             <h1>Minha Lista de Tarefas</h1>
         </header>
         <div class="controls">
-            <button id="openModal">Adicionar nova tarefa...</button>
+            <button id="openModal">Adicionar nova tarefa...<i data-lucide="plus"></i></button>
+        </div>
+        <dialog>
+            <h3>Nova Tarefa</h3>
+            <input type="text" id="txtTitle" placeholder="Digite a tarefa aqui...">
+            <select id="txtCategoria" placeholder="Selecione a categoria (opcional)"></select>
+            <button id="saveTask">Adicionar</button>
+        </dialog>
+        <div class="message">
+            <p>Nenhuma tarefa adicionada</p>
         </div>
         <div class="listBox">
             <div class="cardTask">
-                <h4 class="task-title">Estudar HTML e CSS</h4>
-        
-                <div class="task-meta">
-                    <p><strong>Categoria:</strong> <span class="categoria">Estudos</span></p>
-                    <p><strong>Criada em:</strong> <span class="date">06/09/2025</span></p>
+                <div class="taskTitle">
+                    <h4>Estudar HTML e CSS</h4>
+                    <label>
+                        <input type="checkbox" class="checkTask">
+                        Pendente
+                    </label>
+                </div>
+                <div class="task-info">
+                    <p><span class="legend">Categoria: </span><span class="categoria">Estudos</span></p>
+                    <p><span class="legend">Criada em:</span><span class="date">06/09/2025</span></p>
                 </div>
             </div>
         </div>
     </div>
+    <script src="code.js"></script>
 </body>
 </html>
