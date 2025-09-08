@@ -12,20 +12,33 @@
         <header>
             <h1>Minha Lista de Tarefas</h1>
         </header>
+
         <div class="controls">
             <button id="openModal">Adicionar nova tarefa...<i data-lucide="plus"></i></button>
         </div>
+
+        <p class="message">Nenhuma tarefa adicionada</p>
+
         <dialog>
-            <h3>Nova Tarefa</h3>
-            <input type="text" id="txtTitle" placeholder="Digite a tarefa aqui...">
-            <select id="txtCategoria" placeholder="Selecione a categoria (opcional)"></select>
-            <button id="saveTask">Adicionar</button>
+            <div class="modalContent">
+                <h3>+ Nova Tarefa</h3>
+                <input type="text" id="txtTitle" autocomplete="off" placeholder="Digite a tarefa aqui...">
+
+                <select id="txtCategoria" placeholder="Selecione a categoria">(opcional)
+                    <option value="" disabled selected>Selecione a categoria</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Trabalho">Trabalho</option>
+                </select>
+
+                <div class="controlsModal">
+                    <button id="closeModal">Cancelar</button>
+                    <button id="saveTask">Adicionar</button>
+                </div>
+            </div>
         </dialog>
-        <div class="message">
-            <p>Nenhuma tarefa adicionada</p>
-        </div>
-        <div class="listBox">
-            <div class="cardTask">
+
+        <div id="listBox">
+<!--             <div class="cardTask">
                 <div class="taskTitle">
                     <h4>Estudar HTML e CSS</h4>
                     <label>
@@ -38,7 +51,7 @@
                     <p><span class="legend">Criada em:</span><span class="date">06/09/2025</span></p>
                 </div>
             </div>
-        </div>
+ -->        </div>
     </div>
     <script src="code.js"></script>
 </body>

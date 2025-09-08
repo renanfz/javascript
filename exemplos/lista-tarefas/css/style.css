@@ -41,23 +41,37 @@ button#openModal {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 dialog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 10% auto;
-    height: 200px;
-    width: 60%;
-    border: 1px solid gray;
-    border-radius: 8px;
-    z-index: 1;
-    box-shadow: 0px 2px 7px 0px rgba(0, 0, 0, 0.625);
+  padding: 1rem;
+  margin: 10% auto;
+  height: 200px;
+  width: 60%;
+  border: 1px solid gray;
+  border-radius: 8px;
+  z-index: 1;
+  box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.625);
 }
 
-dialog > h3 {
+/* Estilize o conteúdo interno com flex */
+dialog > div.modalContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+div.controlsModal {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin-top: 5px;
+}
+
+dialog h3 {
     text-align: left;
     padding: 10px;
     margin-top: -15px;
@@ -69,10 +83,6 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.645);
 }
 
-button#saveTask {
-    background-color: rgb(225, 225, 225);
-}
-
 input[type='text'], select {
     padding: 10px;
     width: 90%;
@@ -81,12 +91,18 @@ input[type='text'], select {
     border: 1px solid rgba(128, 128, 128, 0.567);
 }
 
-button#saveTask {
+button#saveTask, button#closeModal {
     padding: 10px;
-    width: 90%;
+    width: 48%;
     border-radius: 8px;
     border: none;
     cursor: pointer;
+    background-color: rgb(210, 210, 210);
+}
+
+button#closeModal {
+    background-color: white;
+    border: 2px solid rgb(200, 200, 200);
 }
 
 div.cardTask { 
@@ -95,8 +111,6 @@ div.cardTask {
     padding: 6px 10px;
     border-radius: 8px;
     width: 95vw;
-/*     display: grid;
-    grid-template-columns: repeat(2, 1fr); */
 }
 
 div.taskTitle {
@@ -109,10 +123,11 @@ div.taskTitle {
 
 input.checkTask{
     scale: 1.3;
+    background-color: black;
 }
 
 input.checkTask:checked{
-    color: aliceblue;
+    content: 'Feito';
 }
 
 
@@ -133,3 +148,6 @@ p {
 svg.lucide {
     height: 20px;
 }
+
+/* Transitions */
+
