@@ -1,4 +1,25 @@
 STRINGS --
-slice('separador') Transforma uma string em array por separador
-replace('isso', 'por isso') Troque isso por isso
-substring(0, 5) Mostre do índice 0 até 5
+    slice('separador') Transforma uma string em array por separador
+    replace('isso', 'por isso') Troque isso por isso
+    substring(0, 5) Mostre do índice 0 até 5
+
+INTERVALOS --
+    ----
+    setTimeout() executa uma funcao depois de determinado tempo
+    ex: 
+    function rodar() {
+        let timer = setTimeout(() => {
+            alert('Executou')
+        }, tempo em milisegundos)
+
+        clearTimeout(timer) - parar
+    }
+    ----
+    setInterval() executa uma funcao a cada segundo
+    ex:
+        function iniciar() {
+            timer = setInterval(funcao, tempo(em milisegundos))
+        }
+
+        clearInterval(timer) - parar
+    ----
