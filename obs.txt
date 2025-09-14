@@ -1,0 +1,6 @@
+// ICONES LUCIDE
+    1. Colocar no header: <script src="https://unpkg.com/lucide@latest"></script>
+
+    2. Estrutura do ícone: <i data-lucide="nome"></i>
+
+    3. No JS: lucide.createIcons()
