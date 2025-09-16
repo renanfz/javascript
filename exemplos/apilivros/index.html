@@ -7,17 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>API Books v1</h1>
-
-    <form class="areaSearch" autocomplete="off">
-        <input type="search" id="input-search">
-        <button id="btn-search">Buscar</button>
-    </form>
-    <div class="results"></div>
+    <div class="container">
     
+        <h1>API Books</h1>
+    
+        <form class="areaSearch" autocomplete="off">
+            <input type="search" id="input-search" placeholder="Procure por um livro...">
+            <button id="btn-search">Buscar</button>
+        </form>
+        <progress max="5"></progress>
+        <div class="results">
 
+            <div class="book">
+            <img src="http://books.google.com/books/content?id=-zCFDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api">
+            <div class="info">
+                <h2>Título do Livro</h2>
+                <p><strong>Autor:</strong> Fulano</p>
+                <a href="#">Ver mais</a>
+            </div>
+            </div>
+
+            <div class="book">
+                <h2>Segredos do Tempo</h2>
+                <p><strong>Autor:</strong> João Silva</p>
+                <img src="https://via.placeholder.com/150x220.png?text=Capa+do+Livro" alt="Capa do livro">
+                <p><a href="https://example.com/preview/segredos-do-tempo" target="_blank">Ver mais</a></p>
+                <hr>
+        </div>
+
+<div class="book">
+  <h2>Além das Estrelas</h2>
+  <p><strong>Autor:</strong> Ana Ribeiro</p>
+  <!-- Sem thumbnail -->
+  <p><a href="https://example.com/preview/alem-das-estrelas" target="_blank">Ver mais</a></p>
+  <hr>
+</div>
+        </div>
+    </div>
     <footer>
-        <p>Criado por <i>Renan</i></p>
+        <p>Desenvolvido por <i>Renan</i></p>
     </footer>
     <script src="script.js"></script>
 </body>

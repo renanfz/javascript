@@ -45,22 +45,26 @@ function loadBooks(json) {
             const authors = volume.authors ? volume.authors.join(", ") : "Autor desconhecido";
             const previewLink = volume.previewLink || "#";
             let card = document.createElement("div");
-            card.classList.add('cardBook')
+            card.classList.add('book')
             card.innerHTML = `
-                <h2>${title}</h2>
-                <p><strong>Autor:</strong> ${authors}</p>
                 ${thumbnail ? `<img src="${thumbnail}" alt="Capa do livro">` : ""}
-                <p><a href="${previewLink}" target="_blank">Ver mais</a></p>
+                <div class="info">
+                    <h2>${title}</h2>
+                    <p><strong>Autor:</strong> ${authors}</p>
+                    <p><a href="${previewLink}" target="_blank">Ver mais</a></p>
+                </div>
                 <hr>
                 `;
             resultsDiv.appendChild(card);
         })
+        resultsDiv.style.display = 'block'
     }, 5 * 150)
 }
 
 function progress() {
     const bar = document.querySelector('progress');
     const intervalTime = 150;
+    bar.style.display = 'block'
     bar.value = 0;
 
     const progressInterval = setInterval(() => {
@@ -71,3 +75,4 @@ function progress() {
         }
     }, intervalTime);
 }
+
