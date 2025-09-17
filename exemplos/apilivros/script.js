@@ -9,7 +9,7 @@ form.addEventListener('submit', async (event) => {
 
     // Verificacao
     if (!value) {
-        alert('Vazio')
+        alert('Ops! O campo está vazio.')
         inputSearch.focus()
         return
     }
