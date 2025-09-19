@@ -68,7 +68,7 @@ progress::-webkit-progress-value {
 }
 
 .results {
-    height: calc(58vh - 50px);
+    height: 350px;
     width: 100%;
     background-color: var(--bg-gray);
     overflow-y: scroll;
