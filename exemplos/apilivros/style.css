@@ -68,7 +68,7 @@ progress::-webkit-progress-value {
 }
 
 .results {
-    height: 350px;
+    height: calc(58vh - 50px);
     width: 100%;
     background-color: var(--bg-gray);
     overflow-y: scroll;
@@ -112,4 +112,3 @@ footer {
     box-shadow: var(--shadow);
 }
 
-input::placeholder 

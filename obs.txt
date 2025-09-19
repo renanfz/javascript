@@ -4,3 +4,8 @@
     2. Estrutura do ícone: <i data-lucide="nome"></i>
 
     3. No JS: lucide.createIcons()
+
+// ATRIBUTOS    
+    - Adicionar novo atributo : elemento.setAttribute('data-key', 'valor') 
+
+    - Pegar atributo de um elemento : let data = elemento.     getAttribute('data-key')
